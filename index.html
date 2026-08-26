@@ -4,178 +4,72 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EditorForge</title>
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-font-family:Arial,sans-serif;
-background:#050505;
-color:white;
-overflow-x:hidden;
-}
-header{
-position:fixed;
-top:0;
-width:100%;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-background:rgba(0,0,0,.65);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-.logo{
-font-size:28px;
-font-weight:bold;
-color:#9ff6ff;
-text-shadow:0 0 15px #00d9ff;
-}
+body{font-family:Arial;background:#050505;color:#fff}
 .hero{
 height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+background:url('BANNER.jpeg') center/cover no-repeat;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+text-align:center;position:relative;
 }
-.hero h1{
-font-size:clamp(48px,8vw,90px);
-color:#9ff6ff;
-text-shadow:0 0 25px #00d9ff;
-animation:glow 2s infinite alternate;
+.hero::before{
+content:"";position:absolute;inset:0;
+background:rgba(0,0,0,.55);
 }
-@keyframes glow{
-from{text-shadow:0 0 10px #00d9ff}
-to{text-shadow:0 0 40px #00d9ff}
-}
-.hero p{
-margin:20px 0;
-font-size:20px;
-color:#cfcfcf;
-max-width:650px;
-}
+.logo{width:170px;border-radius:50%;box-shadow:0 0 30px #00d9ff;z-index:1}
+h1{z-index:1;font-size:60px;color:#fff;margin:20px 0 10px}
+p{z-index:1;font-size:22px;color:#ddd;max-width:700px}
 .btn{
-display:inline-block;
-padding:14px 35px;
-border-radius:50px;
-background:#00d9ff;
-color:black;
-font-weight:bold;
-text-decoration:none;
-transition:.3s;
+z-index:1;margin-top:30px;padding:14px 30px;
+background:#ff7a00;color:#fff;text-decoration:none;
+border-radius:40px;font-weight:bold;
 }
-.btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 20px #00d9ff;
-}
-section{
-padding:90px 8%;
-}
-.title{
-text-align:center;
-font-size:40px;
-margin-bottom:40px;
-color:#9ff6ff;
-}
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:25px;
-}
+section{padding:70px 8%}
+.title{text-align:center;color:#ff7a00;font-size:38px;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
 .card{
-background:#111;
-padding:30px;
-border-radius:18px;
-transition:.35s;
-border:1px solid #1d1d1d;
+background:#111;padding:25px;border-radius:18px;
+box-shadow:0 0 15px rgba(255,122,0,.2);
 }
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 25px rgba(0,217,255,.35);
-}
-.portfolio{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.thumb{
-height:170px;
-border-radius:18px;
-background:linear-gradient(135deg,#00d9ff22,#ffffff08);
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:24px;
-}
-footer{
-padding:30px;
-text-align:center;
-color:#888;
-border-top:1px solid #1a1a1a;
-}
+footer{text-align:center;padding:30px;background:#111}
 .whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#25D366;
-color:white;
-padding:14px 18px;
-border-radius:999px;
-text-decoration:none;
-font-weight:bold;
+position:fixed;right:20px;bottom:20px;
+background:#25D366;color:white;padding:15px 18px;
+border-radius:999px;text-decoration:none;font-weight:bold;
 }
 </style>
 </head>
-
 <body>
 
-<header>
-<div class="logo">EDITORFORGE</div>
-</header>
-
-<section class="hero">
+<div class="hero">
+<img src="EF LOGO.jpeg" class="logo">
 <h1>EDITORFORGE</h1>
 <p>Crafting Raw Footage into Powerful Visual Stories.</p>
-<a href="https://wa.me/91XXXXXXXXXX" class="btn">Hire Me</a>
-</section>
+<a class="btn" href="https://wa.me/918754802140">Hire Me on WhatsApp</a>
+</div>
 
 <section>
 <h2 class="title">Services</h2>
 <div class="grid">
 <div class="card">🎬 YouTube Editing</div>
 <div class="card">📱 Reels & Shorts</div>
-<div class="card">🎨 Color Grading</div>
+<div class="card">🎮 Gaming Edits</div>
 <div class="card">✨ Motion Graphics</div>
 </div>
 </section>
 
 <section>
-<h2 class="title">Portfolio</h2>
-<div class="portfolio">
-<div class="thumb">YouTube Edit</div>
-<div class="thumb">Cinematic Reel</div>
-<div class="thumb">Gaming Edit</div>
-<div class="thumb">Podcast Edit</div>
-<div class="thumb">Commercial</div>
-<div class="thumb">Travel Edit</div>
+<h2 class="title">Connect</h2>
+<div class="grid">
+<div class="card">📞 WhatsApp: 8754802140</div>
+<div class="card">📸 Instagram: @editor_forge_01</div>
 </div>
 </section>
 
-<section>
-<h2 class="title">Contact</h2>
-<div style="text-align:center">
-<p>Email: yourmail@example.com</p>
-<p>Instagram: @editorforge</p>
-</div>
-</section>
+<footer>© 2026 EditorForge</footer>
 
-<footer>
-© 2026 EditorForge
-</footer>
-
-<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/918754802140">WhatsApp</a>
 
 </body>
 </html>
